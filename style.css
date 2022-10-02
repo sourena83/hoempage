@@ -148,6 +148,7 @@ iframe{
 }
 
 
+
 body {
     background: dodgerblue linear-gradient(45deg, aqua, dodgerblue, deeppink) fixed;
 
@@ -159,8 +160,11 @@ body {
 #post:hover{
     background-color: deeppink;
 }
+
 /* don't edit this */
 .jest-lite-report__status--pass {
   background: var(--color-pass);
 }
 .jest-lite-report__errors { display:none }
+
+
