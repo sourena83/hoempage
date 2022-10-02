@@ -1,3 +1,10 @@
+/* =================
+  TESTS, LOOK AT THESE
+  Reading tests will always help you discover your requirements.
+  You can make this window bigger. 
+   ===================
+*/
+
 const {
   core: { test, expect, run },
   prettify
@@ -61,11 +68,18 @@ const console = document.getElementById("tests");
 prettify.toHTML(run(), console);
 
 
- var li = document.createElement("li");
+
+
+
+
+
+var post= document.getElementById("post");
+post.addEventListener("click", function(){
+    var commentBoxValue= document.getElementById("comment-box").value;
+ 
+    var li = document.createElement("li");
     var text = document.createTextNode(commentBoxValue);
     li.appendChild(text);
     document.getElementById("unordered").appendChild(li);
  
 });
-
-
