@@ -1,10 +1,3 @@
-/* =================
-  TESTS, LOOK AT THESE
-  Reading tests will always help you discover your requirements.
-  You can make this window bigger. 
-   ===================
-*/
-
 const {
   core: { test, expect, run },
   prettify
@@ -25,22 +18,7 @@ const getHeader = document.querySelectorAll("header"),
   getIFrame = document.querySelectorAll("iframe"),
   getImage = document.querySelectorAll("img"),
   getWords = document.body.innerText;
-function getNumberOrString(value) {
-  // Convert a string value to a number if possible
-  let number_value = Number(value);
-  if (Number.isNaN(number_value)) {
-    return value
-  } else {
-    return number_value
-  }
-}
 
-
-
-document.getElementById('button').addEventListener('click', (event) => {
-  window.speechSynthesis.speak(new SpeechSynthesisUtterance(getNumberOrString(document.getElementById('text').value)));
-
-});
 /* =================
    ASSERTIONS 
    These are the things we check are true about your page.
@@ -81,26 +59,3 @@ test("There are at least 500 words on the page", () => {
 
 const console = document.getElementById("tests");
 prettify.toHTML(run(), console);
-
-
-function getNumberOrString(value) {
-  // Convert a string value to a number if possible
-  let number_value = Number(value);
-  if (Number.isNaN(number_value)) {
-    return value
-  } else {
-    return number_value
-  }
-}
-
-
-
-document.getElementById('button').addEventListener('click', (event) => {
-  let element_list = document.getElementById('list');
-  let new_li = document.createElement('li');
-  new_li.setAttribute("id", getNumberOrString(document.getElementById('text').value));
-
-  element_list.appendChild(new_li);
-
-});
-
